@@ -1,0 +1,21 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+h1 {
+    color: #0066cc;
+}
+button {
+    background-color: #0066cc; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno para que no se vea tan pequeño */
+    border: none; /* Quita el borde por defecto */
+    border-radius: 5px; /* Redondea las esquinas */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor a una manita al pasar el mouse */
+}
+button:hover {
+    background-color: #004080; /* Un tono de azul más oscuro */
+}
