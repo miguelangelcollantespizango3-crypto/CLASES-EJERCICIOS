@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b3d60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 390px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    width: 75px;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: #ffffff;
+    width: 100%;
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+    font-size: 22px;
+    color: #111;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus {
+    border-color: #0b3d60;
+}
+
+#error {
+    color: #d9534f;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    min-height: 15px;
+}
+
+#btnIngresar {
+    width: 100%;
+    background-color: #6c7a89;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
+}
+
+#btnIngresar:hover {
+    background-color: #55606c;
+}

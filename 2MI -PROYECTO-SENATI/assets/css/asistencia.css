@@ -1,0 +1,190 @@
+CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b3d60;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.asistencia-container {
+    width: 100%;
+    max-width: 390px;
+    min-height: 667px;
+    background-color: #0b3d60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    overflow-y: auto;
+}
+
+/* 1. Logo superior con cuadro blanco exacto */
+.logo-box {
+    width: 95px;   /* Antes era 75px, ahora es más grande */
+    height: 95px;  /* Antes era 75px */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.logo-box img {
+    width: 75px;   /* Imagen más grande dentro del cuadro */
+    height: auto;
+    object-fit: contain;
+}
+
+/* 2. Avatar ilustrado limpio y nombre */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-img-box {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.avatar-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.user-profile h1 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 3. Tarjeta blanca grande inferior */
+.scanner-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 280px;  /* Reducido de 340px a 280px para que se vea más pequeño */
+    border-radius: 20px;
+    padding: 10px;     /* Menos relleno para que sea más compacto */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scanner-box {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #0b3d60;
+    border-radius: 16px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scan-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scanner-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Marcos de las esquinas del escáner */
+.corner {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-color: #ffffff;
+    border-style: solid;
+    pointer-events: none;
+}
+
+.top-left {
+    top: 12px;
+    left: 12px;
+    border-width: 4px 0 0 4px;
+}
+
+.top-right {
+    top: 12px;
+    right: 12px;
+    border-width: 4px 4px 0 0;
+}
+
+.bottom-left {
+    bottom: 12px;
+    left: 12px;
+    border-width: 0 0 4px 4px;
+}
+
+.bottom-right {
+    bottom: 12px;
+    right: 12px;
+    border-width: 0 4px 4px 0;
+}
+
+
+
+
+
+
+
+/* Animación de la línea de escaneo láser */
+@keyframes laserScan {
+    0% {
+        top: 0%;
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: 95%;
+        opacity: 0.8;
+    }
+}
+
+/* Estilo de la barra de láser que se moverá al hacer clic */
+.scanner-card .scan-frame::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to bottom, rgba(0, 255, 128, 0.2), #00ff80);
+    box-shadow: 0 0 10px #00ff80, 0 0 20px #00ff80;
+    display: none; /* Oculto por defecto hasta que se presione */
+    z-index: 10;
+}
+
+/* Clase que activa la animación cuando hacemos clic */
+.scanner-card.scanning .scan-frame::after {
+    display: block;
+    animation: laserScan 1.5s ease-in-out infinite alternate;
+}

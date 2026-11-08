@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Escritorio</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/dashboard-escritorio.css">
+</head>
+<body>
+
+  <header>
+    <a href="asistencia-escritorio.html"><img src="assets/image/logo.png" alt="Logo"></a>
+
+    <nav>
+      <a href="dashboard-escritorio.html">Inicio</a>
+      <a href="#">Reportes Empleados</a>
+      <a href="asistencia-escritorio.html" class="salir" aria-label="Siguiente"></a>
+    </nav>
+  </header>
+
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Colaborador</th>
+          <th>Entrada</th>
+          <th>Salida</th>
+        </tr>
+      </thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </section>
+
+  <script src="assets/js/dashboard-escritorio.js"></script>
+</body>
+</html>

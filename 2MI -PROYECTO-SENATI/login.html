@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+    <main class="login-container">
+        <img src="assets/image/logo.png" alt="Logo" id="logo">
+        <div class="card">
+            <h1>Iniciar Sesión</h1>
+            <form id="formLogin">
+                <label for="correo">Correo Electrónico:</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="correo" placeholder="ejemplo@email.com" required>
+                </div>
+                <label for="contrasena">Contraseña:</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="contrasena" placeholder="Ingresar su contraseña" required>
+                </div>
+                <p id="error"></p>
+                <button type="submit" id="btnIngresar">INGRESAR</button>
+            </form>
+        </div>
+    </main>
+    <script src="assets/js/login.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- Archivo JS si lo tienes -->
+    <script src="assets/js/login.js"></script>
+
+    <!-- Pega esto al último, antes de cerrar el body -->
+    <script>
+        document.querySelector('button, .btn-ingresar').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>

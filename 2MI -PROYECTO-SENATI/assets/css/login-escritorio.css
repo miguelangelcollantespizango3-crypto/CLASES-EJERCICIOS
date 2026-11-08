@@ -1,0 +1,117 @@
+/* =====================================================
+   LOGIN - ESCRITORIO
+   Todo se mide en "cqw": 1cqw = 1% del ancho de la tarjeta.
+   Así la tarjeta conserva las mismas proporciones del
+   diseño de Figma en cualquier tamaño de pantalla.
+   ===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* La tarjeta queda un poco más arriba del centro, como en Figma */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f4278;
+  min-height: 100vh;
+  padding-bottom: 5.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Tarjeta: foto a la izquierda, formulario blanco a la derecha ===== */
+section {
+  container-type: inline-size;
+  width: 64vw;
+  min-width: 640px;
+  max-width: 1280px;
+  aspect-ratio: 602 / 342;
+  display: flex;
+}
+
+/* La foto va pegada, sin esquinas redondeadas */
+section img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Solo el lado derecho del formulario tiene esquinas redondeadas */
+form {
+  position: relative;
+  width: 50%;
+  padding: 10.55cqw 9.5cqw 0 7.1cqw;
+  background-color: #fff;
+  border-radius: 0 4.65cqw 4.65cqw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* El título se centra en todo el panel blanco */
+h1 {
+  margin: 0 -9.5cqw 8.07cqw -7.1cqw;
+  font-size: 3.1cqw;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+}
+
+label {
+  margin-bottom: 2.42cqw;
+  font-size: 1.8cqw;
+  line-height: 1;
+  font-weight: 400;
+}
+
+/* El segundo label queda más separado del primer campo */
+input + label {
+  margin-top: 3.32cqw;
+}
+
+input {
+  width: 100%;
+  height: 4.8cqw;
+  padding: 0 1.5cqw;
+  font-family: inherit;
+  font-size: 1.8cqw;
+  border: 1px solid #aaa;
+  border-radius: 0.7cqw;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0f4278;
+}
+
+/* ===== Botón gris ===== */
+button {
+  align-self: flex-start;
+  width: 24.9cqw;
+  height: 5.5cqw;
+  margin: 2.7cqw 0 0 6cqw;
+  font-family: inherit;
+  font-size: 1.56cqw;
+  color: #fff;
+  background-color: #6b7778;
+  border: none;
+  border-radius: 0.7cqw;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #596465;
+}
+
+/* ===== Mensaje de error (no mueve nada del diseño) ===== */
+#error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.2cqw;
+  font-size: clamp(11px, 1.5cqw, 14px);
+  color: #d93025;
+  text-align: center;
+}
