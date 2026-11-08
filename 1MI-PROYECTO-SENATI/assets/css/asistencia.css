@@ -1,0 +1,125 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Mobile first (sin media queries) ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0f4278;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  padding: 16px 16px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== Botón volver ===== */
+#volver {
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* ===== Logo, avatar y nombre ===== */
+#logo {
+  height: 78px;
+}
+
+#avatar {
+  height: 84px;
+  margin-top: 8px;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ===== Marco de escaneo ===== */
+.marco {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  margin-top: 6px;
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 34px;
+}
+
+.marco img,
+.marco video {
+  position: absolute;
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
+  object-fit: cover;
+  background-color: #000;
+  border-radius: 24px;
+}
+
+/* La cámara está oculta hasta que se abre (así se ve la foto del diseño) */
+.marco video {
+  display: none;
+  transform: scaleX(-1); /* efecto espejo */
+}
+
+.marco video.activa {
+  display: block;
+}
+
+/* Las 4 esquinas del escáner */
+.marco::after {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  pointer-events: none;
+  background:
+    linear-gradient(#fff, #fff) left top / 38px 7px no-repeat,
+    linear-gradient(#fff, #fff) left top / 7px 38px no-repeat,
+    linear-gradient(#fff, #fff) right top / 38px 7px no-repeat,
+    linear-gradient(#fff, #fff) right top / 7px 38px no-repeat,
+    linear-gradient(#fff, #fff) left bottom / 38px 7px no-repeat,
+    linear-gradient(#fff, #fff) left bottom / 7px 38px no-repeat,
+    linear-gradient(#fff, #fff) right bottom / 38px 7px no-repeat,
+    linear-gradient(#fff, #fff) right bottom / 7px 38px no-repeat;
+}
+
+/* ===== Mensaje y botón ===== */
+#mensaje {
+  min-height: 22px;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f4278;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.85;
+}

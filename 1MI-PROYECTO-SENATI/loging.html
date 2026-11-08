@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión</title>
+
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/loging.css">
+</head>
+<body>
+
+  <main>
+    <img src="assets/image/logo.png" alt="Logo">
+
+    <form id="formLogin">
+      <h1>Iniciar Sesión</h1>
+
+      <label for="correo">Correo Electrónico:</label>
+      <div class="campo">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="correo" placeholder="ejemplo@email.com">
+      </div>
+
+      <label for="clave">Contraseña:</label>
+      <div class="campo">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="clave" placeholder="Ingresar su contraseña">
+      </div>
+
+      <p id="error"></p>
+
+      <button type="submit">INGRESAR</button>
+    </form>
+  </main>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>
