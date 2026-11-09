@@ -1,0 +1,1 @@
+SELECT * FROM colegio_asistencia_db.aulas;
