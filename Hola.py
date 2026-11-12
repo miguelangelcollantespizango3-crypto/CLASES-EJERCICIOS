@@ -1,2 +1,2 @@
 #print("Hola mundo")
-print("Hola, mi nombre es Miguel")DDDD
+print("Hola, mi nombre es Miguel")
